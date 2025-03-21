@@ -47,6 +47,19 @@ resource "aws_subnet" "db" {
   tags = merge({ Name = "${local.name}-db-${count.index}" }, var.common_tags)
 }
 
+# DB Subnet Group
+resource "aws_db_subnet_group" "default" {
+  name       = "${local.name}-db-subnet-group"
+  subnet_ids = [aws_subnet.db[*].is]
+
+  tags = merge(
+    {
+    Name = "${local.name}-db-subnet-group"
+    },
+    var.common_tags
+  ) 
+}
+
 ### Route Tables
 resource "aws_route_table" "public" {
   vpc_id = aws_vpc.main.id

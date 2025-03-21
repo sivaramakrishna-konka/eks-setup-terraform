@@ -11,5 +11,5 @@ output "db_subnet_ids" {
   value = module.eks_vpc.db_subnet_ids
 }
 output "db_subnet_group_name" {
-  value = module.eks_vpc.db_subnet_group_name
+  value = module.eks_vpc.db_subnet_group
 }
