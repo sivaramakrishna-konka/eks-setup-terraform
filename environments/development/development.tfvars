@@ -1,13 +1,12 @@
 # Common variables
-
 region = "us-east-1"
 environment = "development"
 project_name = "eks-setup-terraform"
-common_tags = {
+vpc_common_tags = {
   "Terraform" = "true"
-  "Environment" = var.environment
-  "Project" = var.project_name
-   "Owner"       = "Konka"
+  "Environment" = "development"
+  "Project" = "eks-setup-terraform"
+  "Owner"       = "Konka"
 }
 vpc_cidr = "10.1.0.0/16"
 azs = ["us-east-1a", "us-east-1b"]

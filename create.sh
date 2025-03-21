@@ -20,7 +20,7 @@ read -p "Do you want to proceed with 'terraform apply'? (yes/no): " choice
 case "$choice" in 
   yes|y ) 
     echo "Applying Terraform changes..."
-    terraform apply -var-file=environments/development/development.tfvars
+    terraform apply -auto-approve -var-file=environments/development/development.tfvars
     ;;
   no|n ) 
     echo "Terraform apply aborted by user."

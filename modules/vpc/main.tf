@@ -50,7 +50,7 @@ resource "aws_subnet" "db" {
 # DB Subnet Group
 resource "aws_db_subnet_group" "default" {
   name       = "${local.name}-db-subnet-group"
-  subnet_ids = [aws_subnet.db[*].is]
+  subnet_ids = aws_subnet.db[*].id
 
   tags = merge(
     {

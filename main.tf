@@ -8,7 +8,7 @@ module "eks_vpc" {
   private_subnet_cidr  = var.private_subnet_cidr
   db_subnet_cidr       = var.db_subnet_cidr
   vpc_cidr             = var.vpc_cidr
-  common_tags          = var.common_tags
+  common_tags          = var.vpc_common_tags
   enable_nat           = var.enable_nat
   enable_vpc_flow_logs = var.enable_vpc_flow_logs
 }
