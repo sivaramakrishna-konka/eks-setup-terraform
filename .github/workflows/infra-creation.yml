@@ -49,4 +49,4 @@ jobs:
         run: terraform plan -var-file=environments/development/development.tfvars
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve -var-file=environments/development/development.tfvars
+        run: terraform apply -var-file=environments/development/development.tfvars
