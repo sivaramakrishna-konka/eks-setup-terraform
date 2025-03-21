@@ -1,0 +1,10 @@
+# Ignore Terraform directories and files
+**/.terraform/
+**/.terraform.lock.hcl
+
+# Ignore executable files throughout the repo
+**/*.exe
+
+# Ignore license file throughout the repo
+**/LICENSE.txt
+
