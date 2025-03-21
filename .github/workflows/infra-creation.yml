@@ -43,7 +43,7 @@ jobs:
           restore-keys: terraform-modules-${{ runner.os }}
   
       - name: Terraform Init
-        run: terraform init -backend-config=environments/development/backend.tf -plugin-dir=~/.terraform.d/plugin-cache
+        run: terraform init -plugin-dir=~/.terraform.d/plugin-cache
 
       - name: Terraform Plan
         run: terraform plan -var-file=environments/development/development.tfvars
