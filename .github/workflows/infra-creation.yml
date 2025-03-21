@@ -26,7 +26,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: "5.91.0"
+          terraform_version: "1.11.2"
 
       - name: Create Plugin Cache Directory
         run: mkdir -p ~/.terraform.d/plugin-cache
